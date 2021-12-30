@@ -4,6 +4,7 @@ import FormPage2 from "./FormPage2";
 import FormPage3 from "./FormPage3";
 import {AiOutlineArrowLeft, AiOutlineArrowRight} from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
+import FormPage4 from './FormPage4';
 
 const HomeForm = (props) => {
     
@@ -16,18 +17,22 @@ const HomeForm = (props) => {
         Education: "",
         Income:"",
         Gender: "",
-        PropertyArea: ""
+        PropertyArea: "",
+        Model: ""
     });
 
-    const FormTitles = ["Personal", "Background", "Banking"];
+    const FormTitles = ["Personal", "Background", "Banking", "Choose The Model"];
 
     const PageDisplay = () => {
         if (page === 0) {
             return <FormPage1 formData={formData} setFormData={setFormData} />;
         } else if (page === 1) {
             return <FormPage2 formData={formData} setFormData={setFormData} />;
-        } else {
+        } else if (page === 2) {
             return <FormPage3 formData={formData} setFormData={setFormData} />;
+        }
+        else {
+            return <FormPage4 formData={formData} setFormData={setFormData} />;
         }
     };
 
@@ -61,7 +66,7 @@ const HomeForm = (props) => {
                                 e.preventDefault();
                                 if (page === FormTitles.length - 1) {
                                         e.preventDefault();
-                                        if(formData.name === "" || formData.Education === "" || formData.Gender === "" || formData.Income === "" || formData.creditHistory === "" || formData.PropertyArea === "" ){
+                                        if(formData.name === "" || formData.Education === "" || formData.Gender === "" || formData.Income === "" || formData.creditHistory === "" || formData.PropertyArea === "" || formData.Model === "" ){
                                             console.log(formData)
                                             setmsg("Please enter all the required details.");
                                             setTimeout(() => {

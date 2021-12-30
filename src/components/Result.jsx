@@ -27,7 +27,8 @@ const Result = () => {
                 Education: data.state.Education,
                 Gender: data.state.Gender,
                 Income: data.state.Income,
-                PropertyArea: data.state.PropertyArea
+                PropertyArea: data.state.PropertyArea,
+                Model: data.state.Model
             });
         console.log(result);
         setresultt(result.data.message);
@@ -55,8 +56,8 @@ const Result = () => {
                                 <div className="my-2 mb-10 text-green-500 shadow-sm">
                                     Congrats, Your application is approved.
                                 </div>
-                                <div className="w-2/6 h-2/6" rounded-lg>
-                                    <img  src={greenTick} alt="Green Tick" />
+                                <div className="w-2/6 h-2/6">
+                                    <img  src={greenTick} className='rounded-lg' alt="Green Tick" />
                                 </div>
                             </div>
 
@@ -83,22 +84,6 @@ const Result = () => {
                     )
                     }
                 </div>
-                {/* 
-                
-                {((isloading) ? (
-                    <Loading />
-                ) : (
-
-                    (feedbackgif) === "1" ? (
-                        <FeedbackGif res="positive" />
-                    ) : ((feedbackgif) === "2" ? (
-                        <FeedbackGif res="negative" />
-                    ) : (
-                        <FeedbackGif res="server" />
-                    )
-                    )
-                ))
-                } */}
             </div>
         </div>
     )
