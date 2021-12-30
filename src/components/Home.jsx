@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import cinemas from "../Images/cinemas.jpg";
 import restaurent from "../Images/restaurent.jpg";
-
+import LoanPic from "../Images/loan.jpg"
 const Home = () => {
     return (
         <div className="bg-gray-100">
@@ -25,7 +25,7 @@ const Home = () => {
 
                         <div className="p-4 md:w-1/3">
                             <div className="h-full overflow-hidden border-2 border-gray-300 rounded-lg border-opacity-60">
-                                <img className="object-cover object-center w-full lg:h-48 md:h-36" src={restaurent} alt="blog" />
+                                <img className="object-cover object-center w-full lg:h-48 md:h-36" src={LoanPic} alt="blog" />
                                 <div className="p-6">
                                     <h2 className="m-1 text-xs font-medium tracking-widest text-gray-400 title-font">LOAN PREDICTIONS</h2>
                                     <h1 className="m-3 text-lg font-medium text-gray-900 title-font">Predict your status with your info.</h1>

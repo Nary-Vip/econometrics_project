@@ -9,10 +9,11 @@ import {
 import Result from './components/Result';
 import Home from './components/Home';
 import LoanPredictor from './components/LoanPredictor';
+import About from './components/About';
 
 function App() {
   return (
-    <div className="max-w-h-screen App">
+    <div className="w-h-screen App">
     <Router>
       <Navbar />
       <Routes>
@@ -20,6 +21,7 @@ function App() {
         <Route exact path="/restaurent" element={<Restaurant/>}/>
         <Route exact path="/loan" element={<LoanPredictor/>}/>
         <Route exact path="/result" element={<Result/>}/>
+        <Route exact path="/about" element={<About/>}/>
       </Routes>
     </Router>
     </div>
