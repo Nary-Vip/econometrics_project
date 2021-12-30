@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom';
 import greenTick from '../Images/green-tick.gif';
 import reject from '../Images/reject.gif';
+import loading from '../Images/loading.gif';
 import axios from 'axios';
 
 // import Loading from './Loading';
@@ -47,9 +48,20 @@ const Result = () => {
                 </div>
                 <div className="h-full p-10">
                     {resultt === "Loading" ? (
-                        <div className="p-10 my-2 text-yellow-400 border-2 border-gray-200 shadow-md">
-                            Loading...
+                        <div className="flex flex-col items-center justify-center">
+                        <div className="flex flex-col items-center p-10 border-2 border-gray-200 rounded-md justify-content-center">
+                            <div className="my-2 mb-10 text-pink-400 shadow-sm">
+                                Our Machine Learning model is running!
+                            </div>
+                            <div>
+                                <img  src={loading} className='rounded-lg' alt="Loading" />
+                            </div>
                         </div>
+
+                        <div className="p-3 my-10 text-2xl border-2 border-red-200 border-dashed rounded-lg text-sky-300">
+                            Your Information is being processed, Please wait
+                        </div>
+                    </div>
                     ) : (resultt === "1" ? (
                         <div className="flex flex-col items-center justify-center">
                             <div className="flex flex-col items-center p-10 border-2 border-gray-200 rounded-md justify-content-center">
@@ -61,7 +73,7 @@ const Result = () => {
                                 </div>
                             </div>
 
-                            <div className="p-3 my-10 text-2xl border-2 border-red-200 border-dashed rounded-lg text-sky-300">
+                            <div className="p-3 my-10 text-2xl border-2 border-red-200 border-dashed rounded-lg pb-50 text-sky-300">
                                 Please contact our manager Naresh Kumar for further details.
                             </div>
                         </div>
